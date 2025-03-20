@@ -200,6 +200,10 @@ async function startServer() {
 
   await server.start();
 
+  app.use(cors({
+    origin: "https://deluxe-daffodil-b9bfc0.netlify.app", 
+    credentials: true
+  }));
   app.use(
     cors(),
     bodyParser.json(),
